@@ -8,12 +8,7 @@ void main() {
   );
 }
 
-class BallPage extends StatefulWidget {
-  @override
-  _BallPageState createState() => _BallPageState();
-}
-
-class _BallPageState extends State<BallPage> {
+class BallPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,8 +16,22 @@ class _BallPageState extends State<BallPage> {
         backgroundColor: Colors.blue[900],
         title: Text('Ask me anything'),
       ),
-      body: Container(),
+      body: Ball(),
       backgroundColor: Colors.blue,
+    );
+  }
+}
+
+class Ball extends StatefulWidget {
+  @override
+  _BallState createState() => _BallState();
+}
+
+class _BallState extends State<Ball> {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Image.asset('images/ball1.png'),
     );
   }
 }
